@@ -42,43 +42,34 @@ function Navbar() {
           <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
         </div>
         <ul className={`navbar-menu ${isOpen ? 'active' : ''}`}>
-          
-          <li className="navbar-item">
-            <a href="/" className="navbar-link">Start</a>
-          </li>
-          <li className="navbar-item">
-            <a href="/about" className="navbar-link">O nas</a>
-          </li>
-          <li className="navbar-item">
-            <a href="/services" className="navbar-link">Usługi</a>
-          </li>
-          <li className="navbar-item" style={{fontWeight: 600}}>
-          <a href="tel:+48723293014" className="navbar-link phone-icon">
-            <FontAwesomeIcon icon={faPhone} className="navbar-icon" />
-            {/* <span className="phone-number-text">723 293 014</span> */}
-            <span className='burger-menu'>Zadzwoń</span>
-          </a>
-          </li>
-          <li className="navbar-item" style={{fontWeight: 600}}>
-            <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" className="navbar-link">
-              <FontAwesomeIcon icon={faMapMarkerAlt} className='navbar-icon'/>
-              {/* <span className="location-text">Malawa</span> */}
-              <span className='burger-menu'>Znajdź nas</span>
-            </a>
-          </li>
-          <li className="navbar-item" style={{fontWeight: 600}}>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="navbar-link">
-              <FontAwesomeIcon icon={faFacebook} className='navbar-icon'/>
-              <span className='burger-menu'>Facebook</span>
-            </a>
-          </li>
-          <li className="navbar-item" style={{fontWeight: 600}}>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="navbar-link">
-              <FontAwesomeIcon icon={faInstagram} className='navbar-icon'/>
-              <span className='burger-menu'>Instagram</span>
-            </a>
-          </li>
-        </ul>
+  <li className="navbar-item">
+    <a href="/" className="navbar-link">Start</a>
+  </li>
+  <li className="navbar-item">
+    <a href="/about" className="navbar-link">O nas</a>
+  </li>
+  <li className="navbar-item">
+    <a href="/services" className="navbar-link">Usługi</a>
+  </li>
+  <li className="navbar-item">
+    <a href="/contact" className="navbar-link">Kontakt</a>
+  </li>
+  <li className="navbar-item combined" style={{ fontWeight: 600 }}>
+    <a href="tel:+48723293014" className="navbar-link phone-icon">
+      <FontAwesomeIcon icon={faPhone} className="navbar-icon" />
+      <span className='burger-menu'>Zadzwoń</span>
+    </a>
+    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="navbar-link facebook">
+      <FontAwesomeIcon icon={faFacebook} className='navbar-icon'/>
+      <span className='burger-menu'>Facebook</span>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="navbar-link instagram">
+      <FontAwesomeIcon icon={faInstagram} className='navbar-icon'/>
+      <span className='burger-menu'>Instagram</span>
+    </a>
+  </li>
+</ul>
+
       </div>
     </nav>
   );

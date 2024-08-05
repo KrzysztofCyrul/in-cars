@@ -142,55 +142,98 @@
 }
 
 @media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
   .menu-icon {
     display: block;
     margin-right: 10px;
   }
 
-  .burger-menu{
+  .burger-menu {
     display: block;
     color: #000000;
     cursor: pointer;
   }
 
   .navbar-icon {
-    display: none;
+    /* display: none; */
   }
 
-  .navbar{
-    padding: 1rem 0rem;
+  .navbar {
+    padding: 1rem 0;
   }
 
   .navbar-menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    align-items: center;
-    top: 60px;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-rows: auto; /* Automatically adjusts to content */
+    gap: 10px; /* Space between grid items */
+    position: absolute; /* Fixed position for slide-in effect */
+    top: 80px;
+    right: -100%; /* Start off-screen to the right */
+    height: 70vh; /* Full height */
+    width: 300px; /* Fixed width for the menu */
     background-color: #fcfcfcf6;
     text-align: center;
-    max-height: 0;
-    width: 100%;
-    overflow: hidden;
-    margin-top: 5px;
-    transition: max-height 0.3s ease;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-
+    transition: right 0.3s ease; /* Transition for sliding in */
+    padding: 10px 10px; /* Padding around the grid */
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+    overflow-x: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .navbar-menu.active {
-    max-height: 400px;
+    padding-top: 0px;
+    padding-right: 2px;
+    right: 0; /* Slide in from the right */
+    width: 300px; /* Full width */
   }
 
   .navbar-item {
-    margin: 1rem 0;
-    width: 100%;
-    height: 100%;
+    margin: 0; /* Remove margin to fit grid layout */
+    padding: 10px; /* Padding within each grid item */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
-    padding: 1px;
-    
+    align-items: center;
+    background-color: #fff; /* Background for grid item */
+    border-radius: 5px; /* Rounded corners for grid items */
+    height: auto; /* Auto height for items */
+    width: 270px;
   }
 
+  /* Combined items in one row */
+  .navbar-item.combined {
+    display: flex;
+    justify-content: space-around; /* Distribute space around items */
+    align-items: center;
+    width: 100%;
+    width: 270px;
+
+  }
+
+  .navbar-item.combined > a {
+    flex: 1;
+    text-align: center;
+    margin: 0 5px;
+    font-size: 14px;
+
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .navbar-item.combined {
+    flex-direction: row; /* Default row direction for desktop */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+  }
 }
