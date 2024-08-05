@@ -1,13 +1,12 @@
-/* src/components/Navbar/Navbar.css */
 .navbar {
   background-color: #ffffff;
-  padding: 1rem 2rem; /* Zwiększono padding dla większego navbaru */
+  padding: 1rem; /* Zwiększono padding dla większego navbaru */
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 10;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease; /* Płynne przejście między stanami */
@@ -80,6 +79,7 @@
 
 .navbar-item {
   margin: 0 1rem;
+  
 }
 
 .navbar-link {
@@ -97,7 +97,6 @@
   cursor: pointer;
   padding-right: 0;
   padding-right: 3px;
-  transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 .navbar-scrolled .navbar-link {
@@ -113,6 +112,10 @@
 }
 
 .navbar-brand-name-small{
+  display: none;
+}
+
+.burger-menu {
   display: none;
 }
 
@@ -144,32 +147,50 @@
     margin-right: 10px;
   }
 
+  .burger-menu{
+    display: block;
+    color: #000000;
+    cursor: pointer;
+  }
+
+  .navbar-icon {
+    display: none;
+  }
+
+  .navbar{
+    padding: 1rem 0rem;
+  }
+
   .navbar-menu {
     display: flex;
     flex-direction: column;
     position: absolute;
+    align-items: center;
     top: 60px;
-    right: 0;
-    width: 100%;
-    background-color: #333;
+    background-color: #fcfcfcf6;
     text-align: center;
     max-height: 0;
+    width: 100%;
     overflow: hidden;
+    margin-top: 5px;
     transition: max-height 0.3s ease;
-    padding-right: 25px;
-    margin-top: 10px;
-  }
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 
-  .navbar-container {
-    margin-right: 30px;
   }
 
   .navbar-menu.active {
-    max-height: 300px;
+    max-height: 400px;
   }
 
   .navbar-item {
     margin: 1rem 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    padding: 1px;
+    
   }
 
 }

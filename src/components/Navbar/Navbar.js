@@ -1,4 +1,3 @@
-// src/components/Navbar/Navbar.js
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -56,23 +55,27 @@ function Navbar() {
           <li className="navbar-item" style={{fontWeight: 600}}>
           <a href="tel:+48723293014" className="navbar-link phone-icon">
             <FontAwesomeIcon icon={faPhone} className="navbar-icon" />
-            <span className="phone-number-text">723 293 014</span>
+            {/* <span className="phone-number-text">723 293 014</span> */}
+            <span className='burger-menu'>Zadzwoń</span>
           </a>
-        </li>
+          </li>
           <li className="navbar-item" style={{fontWeight: 600}}>
             <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" className="navbar-link">
               <FontAwesomeIcon icon={faMapMarkerAlt} className='navbar-icon'/>
-              <span className="location-text">Malawa</span>
+              {/* <span className="location-text">Malawa</span> */}
+              <span className='burger-menu'>Znajdź nas</span>
             </a>
           </li>
           <li className="navbar-item" style={{fontWeight: 600}}>
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="navbar-link">
               <FontAwesomeIcon icon={faFacebook} className='navbar-icon'/>
+              <span className='burger-menu'>Facebook</span>
             </a>
           </li>
           <li className="navbar-item" style={{fontWeight: 600}}>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="navbar-link">
               <FontAwesomeIcon icon={faInstagram} className='navbar-icon'/>
+              <span className='burger-menu'>Instagram</span>
             </a>
           </li>
         </ul>
